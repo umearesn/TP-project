@@ -1,6 +1,4 @@
 #include "unit.h"
-#include <algorithm>
-#include <iostream>
 
 unit::unit(unitType type) : _type(type) {}
 
@@ -21,6 +19,22 @@ bool unit::updateHPandAttack(int causedDamage) {
     }
     return isDestroyed;
 }
+
+int unit::getDistAttack(){
+    return distantAttack;
+}
+
+int unit::getCloseAttack(){
+    return attackPower;
+}
+
+int unit::getHP(){
+    return curHP;
+}
+
+bool unit::getDefence(){
+    return defence;
+};
 
 Archer::Archer() : unit(unitType::uArcher) {
     price = 15;
