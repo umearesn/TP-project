@@ -1,5 +1,6 @@
 #ifndef UNIT_H
 #define UNIT_H
+#include <iostream>
 
 enum class unitType {
     uArcher,
@@ -14,18 +15,25 @@ public:
     unit(unitType _type);
     unitType getType();
     bool updateHPandAttack(int causedDamage);
+    int getDistAttack();
+    int getCloseAttack();
+    int getHP();
+    bool getDefence();
+    //void closeAttack(unit* aim);
+    //void distAttack(unit* aim);
 
 protected:
     int price;
     int absolHP;
-    int curHP;
+    int movement;
+    int curHP = absolHP;
     int attackPower;
     int distantAttack;
     int distance;
-    int movement;
+    int energy = movement;
     unitType _type;
     int experience = 0;
-    bool defence = false; //от значения данного флаша будет зависеть получаемый урон - доработаю потом
+    bool defence = false; //Г®ГІ Г§Г­Г Г·ГҐГ­ГЁГї Г¤Г Г­Г­Г®ГЈГ® ГґГ«Г ГёГ  ГЎГіГ¤ГҐГІ Г§Г ГўГЁГ±ГҐГІГј ГЇГ®Г«ГіГ·Г ГҐГ¬Г»Г© ГіГ°Г®Г­ - Г¤Г®Г°Г ГЎГ®ГІГ Гѕ ГЇГ®ГІГ®Г¬
 };
 
 
