@@ -1,5 +1,6 @@
 //#include <iostream>
 #include "unitActions.h"
+#include "field.h"
 using namespace std;
 
 int main()
@@ -7,9 +8,11 @@ int main()
     cout << "Hello world!" << endl;
     Archer a;
     Archer b;
-    //a.updateHPandAttack(b.distantAttack);
-    //cout << a.curHP << " " << b.curHP;
     distAttack(&a, &b);
     cout << a.getHP() << " " << b.getHP();
+    cout << endl << endl << "///////////////////////////////////////////////////" << endl << endl;
+    field f;
+    f.Field(10);
+    f.getField();
     return 0;
 }
