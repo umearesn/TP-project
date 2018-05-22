@@ -27,6 +27,14 @@ char section::getSym(){
     return sym;
 }
 
+char section::getUnit() {
+    if(unitHere == nullptr){
+        return ' ';
+    } else {
+        return unitHere->getSym();
+    }
+}
+
 section* section::createRandSection(){
     section* res;
     int key = rand() % 5;
@@ -50,7 +58,13 @@ section* section::createRandSection(){
     return res;
 }
 
+void section::setUnit(unit* u){
+    unitHere = u;
+}
 
+int section::getEnReq(){
+    return energyReq;
+}
 
 Water::Water(){
     _type = sectionType::sWater;

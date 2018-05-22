@@ -13,10 +13,27 @@ field::Field(int n) {
 }
 
 void field::getField(){
+    cout << setw(8) << "";
     for(int i = 0; i < fSize; i++){
+        cout << setw(8) << i;
+    }
+    cout << endl;
+    for(int i = 0; i < fSize; i++){
+        cout << setw(8) << i;
         for(int j = 0; j < fSize; j++) {
-            cout << field[i][j]->getSym();
+            cout << setw(3) << "(" << field[i][j]->getSym() << ", " << field[i][j]->getUnit() << ")";
         }
         cout << endl;
     }
 }
+
+void field::testUnit(unit* u) {
+    field[5][4]->setUnit(u);
+}
+
+/*
+vector< pair<int, int> >* field::DFS(int startX, int startY, int finishX, int finishY){
+    vector< pair<int, int> > path;
+    for( int i = 0; i <=)
+}
+*/

@@ -6,6 +6,9 @@ unitType unit::getType()
 {
     return(_type);
 }
+char unit::getSym(){
+    return sym;
+}
 
 bool unit::updateHPandAttack(int causedDamage) {
     bool isDestroyed = false;
@@ -37,6 +40,7 @@ bool unit::getDefence(){
 };
 
 Archer::Archer() : unit(unitType::uArcher) {
+    sym = 'A';
     price = 15;
     curHP = 25;
     absolHP = 25;
@@ -47,6 +51,7 @@ Archer::Archer() : unit(unitType::uArcher) {
 }
 
 Horseman::Horseman() : unit(unitType::uHorseman) {
+    sym = 'H';
     price = 20;
     curHP = 40;
     absolHP = 40;
@@ -57,6 +62,7 @@ Horseman::Horseman() : unit(unitType::uHorseman) {
 }
 
 Warrior::Warrior() : unit(unitType::uWarrior) {
+    sym = 'W';
     price = 10;
     curHP = 5;
     absolHP = 5;
@@ -67,6 +73,7 @@ Warrior::Warrior() : unit(unitType::uWarrior) {
 };
 
 Scout::Scout() : unit(unitType::uScout) {
+    sym = 'S';
     price = 5;
     curHP = 15;
     absolHP = 15;
