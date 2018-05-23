@@ -19,10 +19,12 @@ public:
     int getCloseAttack();
     int getHP();
     bool getDefence();
+    char getSym();
     //void closeAttack(unit* aim);
     //void distAttack(unit* aim);
 
 protected:
+    char sym;
     int price;
     int absolHP;
     int movement;
